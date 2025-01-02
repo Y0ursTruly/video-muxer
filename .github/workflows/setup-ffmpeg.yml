@@ -1,0 +1,15 @@
+name: Setup FFmpeg
+
+on:
+  push
+
+jobs:
+  setup-ffmpeg:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup FFmpeg
+        uses: ./.github/actions/setup-ffmpeg
